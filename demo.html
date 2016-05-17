@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>jQuery fixed head table</title>
+
+<style>
+.fixed-head-table {
+	margin: 30px;
+}
+
+.fixed-head-table table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #ccc;
+}
+.fixed-head-table table th {
+	font-weight: bold;
+}
+.fixed-head-table table th,
+.fixed-head-table table td {
+	padding: .5em;
+	vertical-align: top;
+	text-align: left;
+	border: 1px solid #ccc;
+}
+.fixed-head-table thead th,
+.fixed-head-table thead td {
+	border-bottom-width: 3px;
+}
+.fixed-head-table table tbody tr:nth-child(odd) th,
+.fixed-head-table table tbody tr:nth-child(odd) td {
+	background: #efefef;
+}
+</style>
+
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script src="jquery-fixed-head-table.js"></script>
+<script>
+$(function(){
+	$('.fixed-head-table').fixedHeadTable(200);
+});
+</script>
+</head>
+<body>
+
+<div class="fixed-head-table">
+	<table>
+		<thead>
+			<tr>
+				<th>head1</th><th>head2</th><th>head3</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>col1</td><td>col2</td><td>col3</td>
+			</tr>
+			<tr>
+				<td>col1</td><td>col2</td><td>col3</td>
+			</tr>
+			<tr>
+				<td>col1</td><td>col2</td><td>col3</td>
+			</tr>
+			<tr>
+				<td>col1</td><td>col2</td><td>col3</td>
+			</tr>
+			<tr>
+				<td>col1</td><td>col2</td><td>col3</td>
+			</tr>
+			<tr>
+				<td>col1</td><td>col2</td><td>col3</td>
+			</tr>
+			<tr>
+				<td>col1</td><td>col2</td><td>col3</td>
+			</tr>
+			<tr>
+				<td>col1</td><td>col2</td><td>col3</td>
+			</tr>
+			<tr>
+				<td>col1</td><td>col2</td><td>col3</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</body>
+</html>
