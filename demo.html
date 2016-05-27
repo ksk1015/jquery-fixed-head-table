@@ -38,13 +38,13 @@
 <script src="jquery-fixed-head-table.js"></script>
 <script>
 $(function(){
-	$('.fixed-head-table').fixedHeadTable(200);
+	$('.fixed-head-table').fixedHeadTable();
 });
 </script>
 </head>
 <body>
 
-<div class="fixed-head-table">
+<div class="fixed-head-table" style="height: 300px;">
 	<table>
 		<thead>
 			<tr>
@@ -81,6 +81,48 @@ $(function(){
 			</tr>
 		</tbody>
 	</table>
+</div>
+
+<button onclick="$('#table1').toggle()">表示 / 非表示</button>
+<div id="table1" style="display: none;">
+	<div class="fixed-head-table" style="height: 300px;">
+		<table>
+			<thead>
+				<tr>
+					<th>head1</th><th>head2</th><th>head3</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>col1</td><td>col2</td><td>col3</td>
+				</tr>
+				<tr>
+					<td>col1</td><td>col2</td><td>col3</td>
+				</tr>
+				<tr>
+					<td>col1</td><td>col2</td><td>col3</td>
+				</tr>
+				<tr>
+					<td>col1</td><td>col2</td><td>col3</td>
+				</tr>
+				<tr>
+					<td>col1</td><td>col2</td><td>col3</td>
+				</tr>
+				<tr>
+					<td>col1</td><td>col2</td><td>col3</td>
+				</tr>
+				<tr>
+					<td>col1</td><td>col2</td><td>col3</td>
+				</tr>
+				<tr>
+					<td>col1</td><td>col2</td><td>col3</td>
+				</tr>
+				<tr>
+					<td>col1</td><td>col2</td><td>col3</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </div>
 
 </body>
