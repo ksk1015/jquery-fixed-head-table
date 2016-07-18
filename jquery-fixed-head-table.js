@@ -14,10 +14,17 @@
 	}
 
 	function init(el, height, killAutoUpdate){
-		var $el = $(el).css('overflow', 'hidden');
+		var $el = $(el);
+		var $table = $el.children('table');
+
+		if ( $table.length === 0 ) {
+			return;
+		}
+
+		$el.css('overflow', 'hidden');
 		if ( height ) $el.height(height);
 
-		var $table = $el.children('table').css({
+		$table.css({
 			boxSizing: 'border-box',
 			margin: '0',
 			width: '100%'
