@@ -15,9 +15,15 @@
 
 	function init(el, height, killAutoUpdate){
 		var $el = $(el);
-		var $table = $el.children('table');
 
-		if ( $table.length === 0 ) {
+		var $table = $el.children('table');
+		if ( $table.length === 0) {
+			return;
+		}
+
+		var $thead = $table.find('thead');
+		var $tbodyTr = $table.find('tbody tr');
+		if ( $thead.length === 0 || $tbodyTr.length === 0 ) {
 			return;
 		}
 
@@ -29,8 +35,6 @@
 			margin: '0',
 			width: '100%'
 		});
-
-		var $thead = $table.find('thead');
 
 		var $head = $('<div class="fixed-head-table-head">').css('overflow', 'hidden').append($table.clone()).prependTo($el);
 
